@@ -2,7 +2,7 @@
 
 Created by Yukihiro Matsumoto ("Matz") in the mid-1990s.
 
-*"I wanted a scripting language that wasmore powerful than Perl, and more OO
+*"I wanted a scripting language that was more powerful than Perl, and more OO
 than Python. That's why I decided to design my own language."*
 
 ## Philosophy

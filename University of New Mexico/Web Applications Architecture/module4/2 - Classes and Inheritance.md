@@ -10,7 +10,6 @@ class MyCLass
     @foo = 2 # an instance variable
   end
 end
-
 ```
 
 ## Methods
@@ -26,7 +25,6 @@ class MyCLass
     @boo = val
   end
 end
-
 ```
 
 Ruby methods have implicit return values. The value of the last expression
@@ -38,7 +36,6 @@ The return statement still exists, but is not required.
 def min(x, y)
   if x < y then x else y end
 end
-
 ```
 
 - When invoking a method, parentheses are optional.

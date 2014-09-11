@@ -37,7 +37,7 @@ To delete all the comments that are dependent of a post, we can use the
 `dependent: :destroy` on the **association**.
 
 ```ruby
-class Comment < ActiveRecord::Base
-  belongs_to :post, dependent: :destroy
+class Post  < ActiveRecord::Base
+  has_many :comments, dependent: :destroy
 end
 ```

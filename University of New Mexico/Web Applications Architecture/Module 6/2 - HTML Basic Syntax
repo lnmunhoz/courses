@@ -1,0 +1,12 @@
+#HTML - Basic Syntax
+
+*I just had to take the hypertext idea and connect it to the TCP
+and DNS ideas and ta-da! he World Wide Web.* - Tim Bernes-Lee
+
+The Hypertext Markup Language (HTML) was present in the document
+sharing system that Bernes-Lee developed at CERN in the early 90's.
+
+## Declarative Programming
+Markup languages are examples of declarative programming languages:
+- Program flow control is not specified
+- Programs specify *what* not *how*

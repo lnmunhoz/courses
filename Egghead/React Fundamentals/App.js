@@ -1,35 +1,48 @@
 import React  from 'react';
+import ReactDOM from 'react-dom';
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			txt: 'this is the state txt'
+			txt: 'this is the state txt',
+			red: 0,
+			blue: 0,
+			green: 0
 		}
 	}
 	update(e) {
-		this.setState({txt: e.target.value})
+		this.setState({
+			red: ReactDOM.findDOMNode(this.refs.red).value,
+			blue: ReactDOM.findDOMNode(this.refs.blue).value,
+			green: ReactDOM.findDOMNode(this.refs.green).value,
+		})
 	}
 	render(){
 		return (
 			<div>
-				<Widget txt={this.state.txt} update={this.update.bind(this)} />
-				<Widget txt={this.state.txt} update={this.update.bind(this)} />
-				<Widget txt={this.state.txt} update={this.update.bind(this)} />
-				<Widget txt={this.state.txt} update={this.update.bind(this)} />		
+				<Slider ref="red" update={this.update.bind(this)} />
+				{this.state.red}
+				<br />
+				<Slider ref="blue" update={this.update.bind(this)} />
+				{this.state.blue}
+				<br />
+				<Slider ref="green" update={this.update.bind(this)} />
+				{this.state.green}
+				<br />
 			</div>
 		) 
 	}
 }
 
-const Widget = (props) => {
+class Slider extends React.Component {
+	render() {
 		return (
-			<div>
-				<input 
-					type="text" 
-					onChange={props.update} />
-				<h1>{props.txt}</h1>
-			</div>
-		) 
+			<input type="range"
+				min="0"
+				max="255"
+				onChange={this.props.update} />
+		)
+	}
 }
 
 App.propTypes = {

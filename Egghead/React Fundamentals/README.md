@@ -18,3 +18,6 @@ class App extends React.Component {
 const App = () => <h1>Hello
 </h1>
 ```
+
+### The `render` method
+Will only allow to return a single node. It returns `React.createElement`.
